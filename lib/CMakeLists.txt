@@ -12,7 +12,7 @@ file(GLOB_RECURSE ARCS_LIB CONFIGURE_DEPENDS
 add_library(ARCS_LIB STATIC ${ARCS_LIB})
 target_include_directories(ARCS_LIB
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
-        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../sys # sysに依存
+        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../sys # sysに依存
 )
 # C++17機能を要求
 target_compile_features(ARCS_LIB PUBLIC cxx_std_17)
