@@ -75,7 +75,7 @@ namespace ARCS {	// ARCS名前空間
 			
 			//! @brief ムーブコンストラクタ
 			DisturbanceObsrv(DisturbanceObsrv&& r)
-				: u(), tdis(), uVec(), tdisVec(), DOb(r.DOb), DObVec(r.DObVec)
+				: u(), tdis(), uVec(), tdisVec(), DOb(std::move(r.DOb)), DObVec(std::move(r.DObVec))
 			{
 				
 			}
